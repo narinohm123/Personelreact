@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Nav from '../component/nav/navbar'
 import Footer from '../component/layout/footer'
 import Userprofile from '../component/core/userprofile'
+import Personel from '../pages/personel'
 
 function profile() {
     return (
