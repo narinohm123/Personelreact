@@ -1,8 +1,11 @@
 import React from 'react'
 import Image from 'next/image'
-
+import {Nav,NavDropdown} from 'react-bootstrap'
+// import Cssnav from '../../styles/nav.css'
 
 function navbar() {
+  const handleSelect = (eventKey) => alert(`selected ${eventKey}`);
+
     return (
         <div class="d-flex w-100 justify-content-between">
             <div>
@@ -15,40 +18,52 @@ function navbar() {
                     <a href="#" class="btn">ออกจากระบบ</a>
                 </div>
                 <div class="d-flex justify-content-end">
-                    <div>
-                      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                        
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                          <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                          <ul class="navbar-nav">
-                            <li class="nav-item active">
-                              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="#">Features</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="#">Pricing</a>
-                            </li>
-                            <div class="dropdown">
-                              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Dropdown
-                              </button>
-                              <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                <button class="dropdown-item" type="button">Action</button>
-                                <button class="dropdown-item" type="button">Another action</button>
-                                <button class="dropdown-item" type="button">Something else here</button>
-                              </div>
-                            </div>
-                          </ul>
-                        </div>
-                      </nav>
+                    <div style={{width:"95%",backgroundColor:"#AE78D6",border:"2px solid #2F528F",borderRadius:'15px 0px 0px 15px'}}>
+                              <Nav  variant="pills" activeKey="1" onSelect={handleSelect} style={{display: 'flex',justifyContent: 'space-evenly',
+                                                  height: '6vh',
+                                                  alignItems: 'center',}}>
+                                <div >
+                                  <NavDropdown title="ข้อมูลบุคลากร" id="nav-dropdown" >
+                                    <NavDropdown.Item eventKey="1.1">ข้อมูลส่วนตัว</NavDropdown.Item>
+                                    <NavDropdown.Item eventKey="1.2">ข้อมูลบุคลากร</NavDropdown.Item>
+                                    <NavDropdown.Item eventKey="1.3">ข้อมูลอัตรากำลัง</NavDropdown.Item>
+                                  </NavDropdown>
+                                </div>
+                                <div>
+                                  <NavDropdown title="การพัฒนาตนเอง" id="nav-dropdown">
+                                    <NavDropdown.Item eventKey="2.1">ข้อมูลการอบรม/สัมมนา/ดูงาน</NavDropdown.Item>
+                                    <NavDropdown.Item eventKey="2.2">ข้อมูลการใช้งบประมาณพัฒนาศักยภาพ</NavDropdown.Item>
+                                    <NavDropdown.Item eventKey="2.3">ข้อมูลการลาศึกษา</NavDropdown.Item>
+                                    <NavDropdown.Item eventKey="2.4">ข้อมูลบุคลากรดีเด่น</NavDropdown.Item>
+                                  </NavDropdown>
+                                </div>
+                                <div>
+                                  <NavDropdown title="ตำแหน่งทางวิชาการ" id="nav-dropdown">
+                                    <NavDropdown.Item eventKey="3.1">สถานะดำเนินการ</NavDropdown.Item>
+                                    <NavDropdown.Item eventKey="3.2">เอกสารประกอบการสอน / คำสอน</NavDropdown.Item>
+                                    <NavDropdown.Item eventKey="3.3">ผู้ดำรงตำแหน่งทางวิชาการ</NavDropdown.Item>
+                                  </NavDropdown>
+                                </div>
+                                <div>
+                                  <Nav.Item>
+                                    <Nav.Item>
+                                      <Nav.Link eventKey="link-1">แผนพัฒนาบุคลากร</Nav.Link>
+                                    </Nav.Item>
+                                  </Nav.Item>
+                                </div>
+                                <div>
+                                  <Nav.Item>
+                                    <Nav.Item>
+                                      <Nav.Link eventKey="link-2">รายงานผลการดำเนินงาน</Nav.Link>
+                                    </Nav.Item>
+                                  </Nav.Item>
+                                </div>
+                          </Nav>
                     </div>
                 </div>
             </div>
         </div>
+          
     )
 }
 

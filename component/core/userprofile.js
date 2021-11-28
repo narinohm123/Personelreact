@@ -11,7 +11,7 @@ const userprofile = Data.map((rs) => {
 
                 <div>
                     <div >
-                        <button type="button" href="#" class="btn btn-outline-primary " style={{borderRadius:'10px',width:'6vw'}}>หน้าเเรก</button>
+                        <button  href="#" type="button" class="btn btn-outline-success" style={{borderRadius:'10px',width:'6vw'}}>หน้าเเรก</button>
                             </div>
 
                             <div class="d-flex justify-content-between " style={{border:'2px solid #2F528F',width:'80vw',height:'77vh',borderRadius:'10px'}}>  
