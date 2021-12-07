@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Data from  './json/profile.json'
+import style from '../../pages/cssuserprofile/cssuserprofile.module.css'
 
 const userprofile = Data.map((rs) => {
     return(
@@ -11,20 +12,26 @@ const userprofile = Data.map((rs) => {
 
                 <div>
                     <div >
-                        <button  href="/profile" type="button" class="btn btn-outline-success" style={{borderRadius:'10px',width:'6vw'}}>หน้าเเรก</button>
+                        {/* <button  href="/profile" className={style.button}>หน้าเเรก</button> */}
+                        <div className={style.button}>หน้าเเรก</div>
                             </div>
-
-                            <div class="d-flex justify-content-between " style={{border:'2px solid #2F528F',width:'80vw',height:'77vh',borderRadius:'10px'}}>  
-                                
+                            <div class="d-flex justify-content-between " style={{border:'2px solid #2F528F',width:'80vw',height:'77vh',borderRadius:'10px'}}>     
                         <div class="mt-4 mx-4">
-                            <div class="card d-flex " style={{borderRadius:'10px'}}>
-                                <div class="card-body d-flex justify-content-center mb-3 text-center" style={{width:'100%',height:'4vh'}}>
-                                  <h5 >ข้อมูลทั่วไป</h5>
+                            <div >
+                                <div style={{border:'2px solid #F8CBAD',
+                                            backgroundColor:'#F8CBAD',
+                                            width:'12vw',
+                                            height:'4vh',
+                                            alignItems: 'center',
+                                            borderRadius:'10px',
+                                            fontSize:'20px',
+                                            display: 'flex',
+                                            justifyContent: 'center'}}>
+                                  ข้อมูลทั่วไป
                                 </div>
-                                
                                 </div>
                         <div class="d-flex">
-                            <div class="mt-4" style={{borderRight:'2px solid #A6A6A6',width:'10vw',height:'55vh'}}>
+                            <div class="mt-5" style={{borderRight:'2px solid #A6A6A6',width:'10vw',height:'55vh'}}>
                                 <p class="mb-1">เลขที่ตำแหน่ง</p>
                                 <p class="mb-1">ชื่อ-สกุล(TH)</p>
                                 <p class="mb-1">ชื่อ-สกุล(EN)</p>
@@ -44,7 +51,7 @@ const userprofile = Data.map((rs) => {
                                 <p class="mb-1">อีเมล ส่วนตัว</p>
                                 <p class="mb-1">ที่อยู่ปัจจุบัน</p>
                             </div>
-                            <div class="mt-4 mx-4" style={{width:"15vw"}}>
+                            <div class="mt-5 mx-4" style={{width:"15vw"}}>
                                 <p class="mb-1">{rs.numderposition}</p>
                                 <p class="mb-1">{rs.nameth}</p>
                                 <p class="mb-1">{rs.nameen}</p>
@@ -69,13 +76,21 @@ const userprofile = Data.map((rs) => {
                     </div>
                         <div class="mt-4" style={{width:'25vw'}}>
                         <div class="mx-4">
-                            <div class="card d-flex " style={{borderRadius:'10px'}}>
-                                <div class="card-body d-flex justify-content-center mb-3 text-center" style={{width:'100%',height:'4vh'}}>
-                                  <h5 >ข้อมูลวุฒิการศึกษา</h5>
+                            <div >
+                            <div style={{border:'2px solid #F8CBAD',
+                                            backgroundColor:'#F8CBAD',
+                                            width:'12vw',
+                                            borderRadius:'10px',
+                                            fontSize:'20px',
+                                            display: 'flex',
+                                            width:'12vw',
+                                            height:'4vh',
+                                            justifyContent: 'center'}}>
+                                  ข้อมูลวุฒิการศึกษา
                                 </div>
                                 
                                 </div>
-                                <div class="mt-2 " style={{width:'10vw'}}>
+                                <div class="mt-3 " style={{width:'10vw'}}>
                                     <h5 class="">๏ปริญญาตรี</h5>
                                 </div>
                         <div class="d-flex">
@@ -135,8 +150,8 @@ const userprofile = Data.map((rs) => {
                         </div>
                     </div>
                         </div>
-                        <div class="mt-5 mx-3" style={{width:'20vw'}}>
-                            <div class="mt-5" style={{width:'20vw'}}>
+                        <div style={{width:'20vw',marginTop:'5rem'}}>
+                            <div  style={{width:'20vw'}}>
                                     <h5>๏ปริญญาเอก</h5>
                                 </div>
                         <div class="d-flex">

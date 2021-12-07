@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import style from './navcss/nav.module.css'
 
 import {Nav,NavDropdown} from 'react-bootstrap'
 // import Cssnav from '../../styles/nav.css'
@@ -18,8 +19,9 @@ function navbar() {
                     <p>xxxxxxxxxx</p>
                     <a href="#" class="btn">ออกจากระบบ</a>
                 </div>
-                  <div style={{width:"95%",backgroundColor:"#AE78D6",border:"2px solid #2F528F",borderRadius:'15px 0px 0px 15px'}}>
-                  <nav className="d-flex justify-content-around align-items-center" style={{backgroundColor:"#ae78d6"}}>
+                  <div className={style.boxnav}>
+                  <nav style={{display: 'flex',
+                                justifyContent: 'space-around'}}>
                     <button className="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style={{color:"white"}}>
                         ข้อมูลบุคลากร
                     </button>
@@ -88,7 +90,7 @@ function navbar() {
                     <a className="btn " href="/datadevelopment" style={{color:"white"}}>
                         แผนพัฒนาบุคลากร
                     </a>
-                    <a className="btn " href="/datareport" style={{color:"white"}}>
+                    <a className="btn " href="/datareportd" style={{color:"white"}}>
                         รายงานผลดำเนินงน
                     </a>
                 </nav>
